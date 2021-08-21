@@ -1,10 +1,19 @@
-import React from "react";
+import * as React from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
+import BasicFetch from "./pages/BasicFetch";
+import Prefetching from "./pages/Prefetching";
 
 const App = () => {
+  const queryClient = new QueryClient();
   return (
-    <div>
-      <h1>React Query</h1>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      {/* <BasicFetch /> */}
+      <Prefetching />
+
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
   );
 };
 
