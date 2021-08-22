@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 
 import BasicFetch from "./pages/BasicFetch";
+import Caching from "./pages/Caching";
 import Mutations from "./pages/Mutations";
 import Prefetching from "./pages/Prefetching";
 
@@ -12,7 +13,8 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       {/* <BasicFetch /> */}
       {/* <Prefetching /> */}
-      <Mutations />
+      {/* <Mutations /> */}
+      <Caching />
 
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
